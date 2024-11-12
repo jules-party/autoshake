@@ -1,0 +1,10 @@
+keybinds:
+  toggle: 'f4'
+  exit: 'f8'
+  reload_config: 'f6'
+
+screen:
+  w: 3440
+  h: 1440
+
+button_img: './rods/reinforced.png'
