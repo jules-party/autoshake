@@ -17,9 +17,13 @@ detectShake=False
 # so we can reload the config whenever we want
 def readConfig():
     global config
-    with open('./config.yaml') as f:
-        config = yaml.safe_load(f)
-        print("config loaded!")
+    try:
+        with open('./config.yaml') as f:
+            config = yaml.safe_load(f)
+            print("config loaded!")
+    except FileNotFoundError:
+        print("config.yaml not found in directory!")
+        exit(1)
 
 readConfig()
 
@@ -33,7 +37,6 @@ def on():
                     location = pyautogui.center(location)
                     x, y = location
                     autoit.mouse_click('left', x, y)
-                    print("found!!!!!")
             except:
                 pass
         
