@@ -1,5 +1,6 @@
 # autoshake for fisch
 
+* rename `exconfig.yaml` to `config.yaml`
 * just run the `main.py` file using python :p
 * yes... ill setup a pyenv, one day...
 
